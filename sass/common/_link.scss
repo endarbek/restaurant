@@ -1,0 +1,32 @@
+.logo__link {
+    color: #FFF;
+    font-family: "Manrope";
+    font-size: 25px;
+    font-weight: 700;
+}
+.footer__link {
+    color: #FFF;
+    font-family: "Manrope";
+    font-size: 20px;
+    font-weight: 500;
+
+    @media screen and (max-width:950px){
+        display: none;
+    }
+}
+.politic__link {
+    color: #CFCFCF;
+    font-family: "Manrope";
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+}
+@media screen and (max-width:450px){
+    .politic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}

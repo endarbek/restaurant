@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div class="logo__link">LOGOS</div>
+          <div class="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Введите адрес доставки" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="contacts">
+            <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
+            <div class="contact">
+              <h6 class="contact__h6">Контакты:</h6>
+              <h3 class="contact__h3">+7 (917) 510-57-59</h3>
+            </div>
+          </div>
+          <button class="button__logo">
+            Корзина
+            <span class="buy"><i class="fa-solid fa-cart-shopping"></i></span>
+            <span class="strip"></span>
+            <span class="number">4</span>
+          </button>
+        </div>
+      </div>
+      <script>
+        // Look for .hamburger
+        var hamburger = document.querySelector(".hamburger");
+        var logo = document.querySelector(".contacts");
+        // On click
+        hamburger.addEventListener("click", function () {
+          // Toggle class "is-active"
+          hamburger.classList.toggle("is-active");
+          logo.classList.toggle("is-active");
+          // Do something else, like open/close menu
+        });
+      </script>
+    </header>
+    <nav class="nav">
+      <div class="navbar">
+        <a href="#" class="nav__link">Холодные закуски</a>
+        <a href="#" class="nav__link">Горячие закуски</a>
+        <a href="#" class="nav__link">Мясные блюда</a>
+        <a href="#" class="nav__link">Супы</a>
+        <a href="#" class="nav__link">Рыбные блюда</a>
+        <a href="#" class="nav__link">Гриль меню</a>
+        <a href="#" class="nav__link">Фирменные блюда </a>
+        <a href="#" class="nav__link">Напитки</a>
+      </div>
+    </nav>
+    <footer class="footer">
+      <div class="container container__footer">
+        <div class="arrow">
+          <span class="arrox-up"><i class="fa-solid fa-chevron-up"></i></span>
+        </div>
+        <div class="politic">
+          <h1 class="logo__link">LOGOS</h1>
+          <h5 class="politic__link">
+            © ООО СК «АПШЕРОН» Все права защищены. 2010-2020
+          </h5>
+          <h5 class="politic__link">Пользовательское соглашение</h5>
+          <h5 class="politic__link">Карта сайта</h5>
+          <h5 class="politic__link">Политика конфиденциальности</h5>
+        </div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">О ресторане</a>
+          <a href="#" class="footer__link">Условия доставки</a>
+          <a href="#" class="footer__link">Возврат товара</a>
+          <a href="#" class="footer__link">Акции</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

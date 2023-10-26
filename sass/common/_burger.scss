@@ -1,0 +1,11 @@
+$hamburger-layer-color: #65906C;
+$hamburger-types: (collapse);
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+.hamburger {
+    display: none;
+}
+@media screen and (max-width:850px) {
+    .hamburger {
+        display: inline-flex;
+    }
+}
