@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0 ;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    background: #403C3B;
+    box-shadow: 0px 30px 60px 0px rgba(34, 31, 32, 0.20);
+}
+header {
+    margin: 0;
+}
+.logo {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 24px 5px;
+}
+a {
+    text-decoration: none;
+}
+.nav{
+    margin: 0 auto;
+    max-width: 1300px;
+}

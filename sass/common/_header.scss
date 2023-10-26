@@ -1,0 +1,99 @@
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.search {
+    display: flex;
+    flex-grow: 1;
+    padding: 16px 18px;
+    border-radius: 10px;
+    background: #504B4A;
+    @media screen  and (max-width:750px){
+        display: none;
+    }
+}
+input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+}
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @media screen and (max-width:900px){
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background: #FFF;
+        transition: .5s;
+        transform: translateX(100%);
+
+        &.is-active {
+            transform: translateX(0);
+        }
+    }
+}
+.fa-location-dot, .fa-magnifying-glass, .fa-phone-volume {
+    color: #FFF;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(115deg, #618967 5.11%, #72A479 94%);
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+.contact__h6 {
+    @media screen and (max-width:900px){
+        color: #000;
+    }
+    margin: 0;
+    color: #CFCFCF;
+    font-family: "Manrope";
+    font-size: 12px;
+    font-weight: 400;
+}
+.contact__h3 {
+    @media screen and (max-width:900px){
+        color: #000;
+    }
+    margin: 0;
+    color: #FFF;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.strip {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.30);
+}
+.number {
+    width: 24px;
+    height: 24px;
+    background: #FFF;
+    border-radius: 100%;
+    color: black;
+}
+.buy {
+    display: none;
+    @media screen and (max-width:500px){
+        display: inline-flex;
+        order: -1;
+    }
+}
+.number{
+    display: block;
+    @media screen and (max-width:500px){
+        display: none;
+        
+    }
+}
