@@ -1,20 +1,29 @@
-.nav {
-    background: rgba(255, 255, 255, 0.01);
-}
+
 .navbar{
     display: flex;
     overflow-x: auto;
-    gap: 50px;
+    justify-content: space-evenly;
+    padding: 15px;
+
 }
 .nav__link {
-    color: #CFCFCF;
-    font-family: "Manrope";
-    font-size: 18px;
-    font-weight: 400;
+    color: #cfcfcfcd;
+font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 200;
+line-height: normal;
+transition: 1s;
 }
 .nav__link:hover {
     color: #FFF;
     font-family: "Manrope";
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
 }
+hr {
+    height: 0.3px;
+    background-color: #cccccc3e;
+    border: none;
+  }
+  

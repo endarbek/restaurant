@@ -9,83 +9,359 @@
       href="node_modules/@fortawesome/fontawesome-free/css/all.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/app.js" defer></script>
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <div class="logo__link">LOGOS</div>
-          <div class="search">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Введите адрес доставки" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="contacts">
-            <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
-            <div class="contact">
-              <h6 class="contact__h6">Контакты:</h6>
-              <h3 class="contact__h3">+7 (917) 510-57-59</h3>
+  <body id="logos">
+    <div class="wrapper">
+      <div class="content">
+        <header class="header">
+          <div class="container">
+            <div class="logo">
+              <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <div class="logo__link">LOGOS</div>
+              <div class="search">
+                <svg
+                  class="svg-local"
+                  width="18"
+                  height="21"
+                  viewBox="0 0 18 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Location">
+                    <path
+                      id="Path_33958"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.23914 9.39123C1.25354 5.15065 4.7029 1.72465 8.94348 1.73906C13.1841 1.75347 16.6101 5.20282 16.5957 9.44341V9.53036C16.5435 12.2869 15.0044 14.8347 13.1174 16.826C12.0382 17.9466 10.8331 18.9387 9.52609 19.7825C9.1766 20.0848 8.6582 20.0848 8.3087 19.7825C6.3602 18.5143 4.65007 16.9131 3.25653 15.0521C2.01449 13.4293 1.3093 11.4597 1.23914 9.41732L1.23914 9.39123Z"
+                      stroke="#CFCFCF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      id="Ellipse_740"
+                      cx="8.91741"
+                      cy="9.53899"
+                      r="2.46087"
+                      stroke="#CFCFCF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+                <input type="text" placeholder="Введите адрес доставки" />
+                <svg
+                  class="svg-search"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Search">
+                    <circle
+                      id="Ellipse_739"
+                      cx="9.76663"
+                      cy="9.76663"
+                      r="8.98856"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      id="Line_181"
+                      d="M16.0183 16.4851L19.5423 20"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="contacts">
+                <span class="icon"
+                  ><i class="fa-solid fa-phone-volume"></i
+                ></span>
+                <div class="contact">
+                  <h6 class="contact__h6">Контакты:</h6>
+                  <h3 class="contact__h3">+7 (917) 510-57-59</h3>
+                </div>
+              </div>
+              <hr class="hr-3" />
+              <div class="user">
+                <svg
+                  class="svg-user"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="22"
+                  viewBox="0 0 17 22"
+                  fill="none"
+                >
+                  <circle
+                    cx="8.57894"
+                    cy="6.27803"
+                    r="4.77803"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.00002 17.7013C0.998732 17.3654 1.07385 17.0336 1.2197 16.7311C1.67736 15.8157 2.96798 15.3306 4.03892 15.1109C4.81128 14.9461 5.59431 14.836 6.38217 14.7814C7.84084 14.6533 9.30793 14.6533 10.7666 14.7814C11.5544 14.8366 12.3374 14.9467 13.1099 15.1109C14.1808 15.3306 15.4714 15.77 15.9291 16.7311C16.2224 17.3479 16.2224 18.0639 15.9291 18.6807C15.4714 19.6418 14.1808 20.0812 13.1099 20.2917C12.3384 20.4633 11.5551 20.5766 10.7666 20.6304C9.57937 20.731 8.38659 20.7494 7.19681 20.6853C6.92221 20.6853 6.65677 20.6853 6.38217 20.6304C5.59663 20.5772 4.81632 20.464 4.04807 20.2917C2.96798 20.0812 1.68652 19.6418 1.2197 18.6807C1.0746 18.3746 0.999552 18.04 1.00002 17.7013Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <h4>Войти</h4>
+              </div>
+              <button class="button__logo">
+                Корзина
+                <span class="buy"
+                  ><i class="fa-solid fa-cart-shopping"></i
+                ></span>
+                <span class="strip"></span>
+                <hr class="hr-2" />
+                <span class="number"><h4 class="four">4</h4></span>
+              </button>
             </div>
           </div>
-          <button class="button__logo">
-            Корзина
-            <span class="buy"><i class="fa-solid fa-cart-shopping"></i></span>
-            <span class="strip"></span>
-            <span class="number">4</span>
-          </button>
+          <script>
+            // Look for .hamburger
+            var hamburger = document.querySelector(".hamburger");
+            var logo = document.querySelector(".contacts");
+            // On click
+            hamburger.addEventListener("click", function () {
+              // Toggle class "is-active"
+              hamburger.classList.toggle("is-active");
+              logo.classList.toggle("is-active");
+              // Do something else, like open/close menu
+            });
+          </script>
+        </header>
+        <hr />
+        <nav class="nav">
+          <div class="navbar">
+            <a href="#" class="nav__link">Холодные закуски</a>
+            <a href="#" class="nav__link">Горячие закуски</a>
+            <a href="#" class="nav__link">Мясные блюда</a>
+            <a href="#" class="nav__link">Супы</a>
+            <a href="#" class="nav__link">Рыбные блюда</a>
+            <a href="#" class="nav__link">Гриль меню</a>
+            <a href="#" class="nav__link">Фирменные блюда </a>
+            <a href="#" class="nav__link">Напитки</a>
+          </div>
+        </nav>
+        <hr class="hr-1" />
+        <!--  -->
+        <div class="banner-chiken">
+          <div class="pos-nav">
+            <h3 class="next-foot-upper">◄ к выбору блюда</h3>
+            <h2 class="next-foot-midl">
+              <div class="solit-line"></div>
+              КОРЗИНА<span class="style-span-text">(в корзине 3 товара)</span>
+            </h2>
+          </div>
+          <!--  -->
+          <div class="card-basket-card-1">
+            <div class="internal-card">
+              <div class="col-1-card">
+                <img src="img-chiken/Rectangle 2.37.png" alt="chiken" />
+                <div class="internal-card-text">
+                  <h3>ПИЦЦА ДВОЙНАЯ ПЕППЕРОНИ</h3>
+                  <h4 class="text-mini">
+                    Кальмары, мидии, креветки, сыр маасдам, красный лук, микс
+                    оливок, базилик, соус песто
+                  </h4>
+                </div>
+                <!--  -->
+                <div class="container-minuse">
+                  <div class="minuse-svg">
+                    <img
+                      class="style-svg-minuse"
+                      src="svg/minuse.png"
+                      alt="minuse"
+                    />
+                    <p class="text-minuse">1</p>
+                    <img
+                      class="style-svg-minuse-2"
+                      src="svg/pluse.png"
+                      alt="plus"
+                    />
+                    <div class="X">
+                      <h3 class="price">1640 ₽</h3>
+                      <img class="style-svg-minuse-3" src="svg/X.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+              <hr class="hr-4" />
+              <div class="col-2-card">
+                <img src="img-chiken/Rectangle 2.37.png" alt="chiken" />
+                <div class="internal-card-text">
+                  <h3>ПИЦЦА ДВОЙНАЯ ПЕППЕРОНИ</h3>
+                  <h4 class="text-mini">
+                    Кальмары, мидии, креветки, сыр маасдам, красный лук, микс
+                    оливок, базилик, соус песто
+                  </h4>
+                </div>
+                <!--  -->
+                <div class="container-minuse">
+                  <div class="minuse-svg">
+                    <img
+                      class="style-svg-minuse"
+                      src="svg/minuse.png"
+                      alt="minuse"
+                    />
+                    <p class="text-minuse">1</p>
+                    <img
+                      class="style-svg-minuse-2"
+                      src="svg/pluse.png"
+                      alt="plus"
+                    />
+                    <div class="X">
+                      <h3 class="price">1640 ₽</h3>
+                      <img class="style-svg-minuse-3" src="svg/X.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+          <!--  -->
         </div>
+        <!--2  -->
+        <div class="container-additionally">
+          <h2 class="additionally-upper">ДОБАВИТЬ К ЗАКАЗУ</h2>
+          <div class="additionally">
+            <div class="card-additionally">
+              <div class="additionally-text-continer">
+                <img
+                  class="chiken-additinially"
+                  src="img-chiken/Rectangle 2.37.png"
+                  alt=""
+                />
+                <h3 class="additionally-text">КВАС АНАНАСОВЫЙ</h3>
+                <h4 class="additionally-text-2">
+                  Добавить
+                  <img class="plus-1" src="svg/pluse.png" alt="plus" />
+                </h4>
+                <h3 class="additionally-price">1640 ₽</h3>
+              </div>
+            </div>
+            <hr class="line-additionally" />
+            <!--  -->
+            <div class="card-additionally">
+              <div class="additionally-text-continer">
+                <img
+                  class="chiken-additinially"
+                  src="img-chiken/Rectangle 2.37.png"
+                  alt=""
+                />
+                <h3 class="additionally-text">ГРИСССИНИ</h3>
+                <h4 class="additionally-text-2">
+                  Добавить
+                  <img class="plus-1" src="svg/pluse.png" alt="plus" />
+                </h4>
+                <h3 class="additionally-price">1640 ₽</h3>
+              </div>
+            </div>
+            <hr class="line-additionally" />
+            <!--  -->
+            <div class="card-additionally">
+              <div class="additionally-text-continer">
+                <img
+                  class="chiken-additinially"
+                  src="img-chiken/Rectangle 2.37.png"
+                  alt=""
+                />
+                <h3 class="additionally-text">ПИЦЦА ПЕППЕРОНИ</h3>
+                <h4 class="additionally-text-2">
+                  Добавить
+                  <img class="plus-1" src="svg/pluse.png" alt="plus" />
+                </h4>
+                <h3 class="additionally-price">1640 ₽</h3>
+              </div>
+            </div>
+            <hr class="line-additionally" />
+            <!--  -->
+            <div class="card-additionally">
+              <div class="additionally-text-continer">
+                <img
+                  class="chiken-additinially"
+                  src="img-chiken/Rectangle 2.37.png"
+                  alt=""
+                />
+                <h3 class="additionally-text">ПИЦЦА ПЕППЕРОНИ</h3>
+                <h4 class="additionally-text-2">
+                  Добавить
+                  <img class="plus-1" src="svg/pluse.png" alt="plus" />
+                </h4>
+                <h3 class="additionally-price">1640 ₽</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr-5" />
+        <!--  -->
+
+        <div class="result-container">
+          <h2 class="style-result">
+            Итого: <span class="color-result">500 ₽</span>
+            <br />
+            <span class="mini-resil-text"
+              >До бесплатной доставки не хватет:
+              <span class="mini-color"> 100 ₽</span><br />
+              Минимальная сума заказа 1500 ₽</span
+            >
+          </h2>
+          <button class="btn-deker-zacas">Оформить заказ</button>
+        </div>
+
+        <!--  -->
+        <footer class="footer">
+          <div class="container container__footer">
+            <a href="#logos">
+              <div class="arrow">
+                <span class="arrox-up"
+                  ><i class="fa-solid fa-chevron-up"></i
+                ></span></div
+            ></a>
+            <div class="politic">
+              <h1 class="logo__link-foter">LOGOS</h1>
+              <h5 class="politic__link">
+                © ООО СК «АПШЕРОН» <br />Все права защищены. 2010-2020
+              </h5>
+              <h5 class="politic__link">Пользовательское соглашение</h5>
+              <h5 class="politic__link">Карта сайта</h5>
+              <h5 class="politic__link">Политика конфиденциальности</h5>
+            </div>
+            <div class="footer__links">
+              <a href="#" class="footer__link">О ресторане</a>
+              <a href="#" class="footer__link">Условия доставки</a>
+              <a href="#" class="footer__link">Возврат товара</a>
+              <a href="#" class="footer__link">Акции</a>
+            </div>
+          </div>
+        </footer>
       </div>
-      <script>
-        // Look for .hamburger
-        var hamburger = document.querySelector(".hamburger");
-        var logo = document.querySelector(".contacts");
-        // On click
-        hamburger.addEventListener("click", function () {
-          // Toggle class "is-active"
-          hamburger.classList.toggle("is-active");
-          logo.classList.toggle("is-active");
-          // Do something else, like open/close menu
-        });
-      </script>
-    </header>
-    <nav class="nav">
-      <div class="navbar">
-        <a href="#" class="nav__link">Холодные закуски</a>
-        <a href="#" class="nav__link">Горячие закуски</a>
-        <a href="#" class="nav__link">Мясные блюда</a>
-        <a href="#" class="nav__link">Супы</a>
-        <a href="#" class="nav__link">Рыбные блюда</a>
-        <a href="#" class="nav__link">Гриль меню</a>
-        <a href="#" class="nav__link">Фирменные блюда </a>
-        <a href="#" class="nav__link">Напитки</a>
-      </div>
-    </nav>
-    <footer class="footer">
-      <div class="container container__footer">
-        <div class="arrow">
-          <span class="arrox-up"><i class="fa-solid fa-chevron-up"></i></span>
-        </div>
-        <div class="politic">
-          <h1 class="logo__link">LOGOS</h1>
-          <h5 class="politic__link">
-            © ООО СК «АПШЕРОН» Все права защищены. 2010-2020
-          </h5>
-          <h5 class="politic__link">Пользовательское соглашение</h5>
-          <h5 class="politic__link">Карта сайта</h5>
-          <h5 class="politic__link">Политика конфиденциальности</h5>
-        </div>
-        <div class="footer__links">
-          <a href="#" class="footer__link">О ресторане</a>
-          <a href="#" class="footer__link">Условия доставки</a>
-          <a href="#" class="footer__link">Возврат товара</a>
-          <a href="#" class="footer__link">Акции</a>
-        </div>
-      </div>
-    </footer>
+    </div>
   </body>
 </html>

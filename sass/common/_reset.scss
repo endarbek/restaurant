@@ -5,7 +5,6 @@ body {
     margin: 0 ;
     padding: 0;
     font-family: "Manrope", sans-serif;
-    background: #403C3B;
     box-shadow: 0px 30px 60px 0px rgba(34, 31, 32, 0.20);
 }
 header {
@@ -14,7 +13,7 @@ header {
 .logo {
     margin: 0 auto;
     max-width: 1100px;
-    padding: 24px 5px;
+    padding: 5px;
 }
 a {
     text-decoration: none;
@@ -23,3 +22,43 @@ a {
     margin: 0 auto;
     max-width: 1300px;
 }
+ .user{
+     display: flex;
+     color: white;
+     gap: 12px;
+     font-weight: 300;
+     transition: .5s;
+     
+    }
+    .user:hover{
+        font-size: 20px;
+        display: flex;
+        color: rgba(197, 194, 194, 0.742);
+        gap: 13px;
+        font-weight: 600;
+
+
+    }
+ .svg-user{
+    margin-top: 15px;
+ }
+ .hr-3{
+    
+     
+        width: 1px;
+        height: 52px;
+        padding: none;
+      
+ }
+
+ .footer__links{
+    color: #FFF;
+margin-left: 50px;
+font-family: Gilroy;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+ }
+
+ 

@@ -2,23 +2,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 70px;
+    gap: 30px;
 }
 
 .search {
     display: flex;
     flex-grow: 1;
-    padding: 16px 18px;
+    padding: 9px 18px;
     border-radius: 10px;
     background: #504B4A;
+
     @media screen  and (max-width:750px){
         display: none;
     }
+    
 }
 input {
+
     flex-grow: 1;
     border: none;
     background: none;
+    margin-left: 15px;
+font-family: Gilroy;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 .contacts {
     display: flex;
@@ -50,7 +59,16 @@ input {
     width: 32px;
     height: 32px;
     border-radius: 100%;
+transition: 1s;
 }
+
+.icon:hover {    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(115deg, #618967 5.11%, #72A479 94%);
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;}
 .contact__h6 {
     @media screen and (max-width:900px){
         color: #000;
@@ -77,11 +95,15 @@ input {
     background: rgba(255, 255, 255, 0.30);
 }
 .number {
+    
     width: 24px;
     height: 24px;
     background: #FFF;
     border-radius: 100%;
     color: black;
+}
+.four{
+    margin-top:4px ;
 }
 .buy {
     display: none;
@@ -97,3 +119,10 @@ input {
         
     }
 }
+
+.hr-2{
+    height: 30px;
+    width: 1px;
+        background-color: rgba(204, 204, 204, 0.472);
+        border: none;
+      }
